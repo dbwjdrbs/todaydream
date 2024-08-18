@@ -34,6 +34,11 @@
     width: 8em;
     height: 7%;
   }
+
+  .example {
+    width: 500px;
+    height: 100px;
+  }
   
   
   @media all and (max-width:430px) {
