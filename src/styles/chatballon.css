@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "PF-StartDust";
+    src: url("../assets/fonts/PF-StarDust.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PF-StartDust-Bold";
+    src: url("../assets/fonts/PF-StarDust-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PF-StartDust-ExtraBold";
+    src: url("../assets/fonts/PF-StarDust-ExtraBold.ttf") format("truetype");
+}
+
+
+.speech-bubble {
+    position: relative;
+    background: #bee6ea;
+    border-radius: 12px;
+    font-family: "PF-StartDust-Bold";
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 37px solid transparent;
+    border-top-color: #bee6ea;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -18.5px;
+    margin-bottom: -37px;
+    /* 픽셀 느낌의 그림자 */
+    font-family: "PF-StartDust-ExtraBold";
+    /* 픽셀 폰트 */
+}
