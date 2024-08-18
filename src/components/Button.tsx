@@ -3,18 +3,25 @@ import '../styles/global.css';
 import '../styles/button.css';
 
 type Props = {
-    sizeType?: string;
+    mode?: string;
     name: string;
     draggable: boolean;
 }
 // 버튼 width 글자 크기에 따라 늘어나도록 GPT 한테 커스텀 받기
-const Button: React.FC<Props> = ({ sizeType, name, draggable }) => {
-    const currentClass = 'pixel-btn-rounded';
+const Button: React.FC<Props> = ({ mode, name, draggable }) => {
+    let currentClass = 'pixel-btn-rounded';
     const currentDraggable = draggable ? ' draggable' : '';
-    switch (sizeType) {
+    switch (mode) {
         case 'main':
             break;
+        case 'result' :
+            currentClass = 'example';
+            break;
     }
+
+    // if(mode === 'result') {
+    //     currentClass = 'example';
+    // }
 
     return (
         <div>

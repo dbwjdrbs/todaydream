@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/global.css';
 import '../styles/home.css';
@@ -8,16 +8,24 @@ import Button from '../components/Button.tsx';
 
 const Home = () => {
     const randomTmiIdx = Math.floor(Math.random() * tmiDatas.length);
+
     return (
         <div className='background-night'>
             <div className='main-cat'>
                 <TodayTMI
                     content={tmiDatas[randomTmiIdx]} />
-                <Link to={'/dream-interpretation'}>
+                <Link to={'/interpretation'}>
                     <Button
                         name='start'
-                        draggable={true} />
+                        draggable={true}
+                        mode='result' />
                 </Link>
+                <div className='content-name-container'>
+                    <span className='font-bold content-name'>이런 해몽도 있어요</span>
+                </div>
+                <div className='content-list'>
+
+                </div>
             </div>
         </div>
     );

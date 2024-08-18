@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DreamInterpretation() {
+function Interpretation() {
     return (
         <div>
             <h1>DreamInterpretation</h1>
@@ -8,4 +8,4 @@ function DreamInterpretation() {
     );
   }
   
-  export default DreamInterpretation;
+  export default Interpretation;
