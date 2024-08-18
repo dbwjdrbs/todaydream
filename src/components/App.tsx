@@ -1,20 +1,19 @@
-import React from 'react';
-import '../styles/App.css';
+import React, { useState } from 'react';
+import '../styles/app.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; // react-router-dom@^6.3.0
 import Home from '../pages/Home.tsx';
-import Page1 from '../pages/Page1.tsx';
-import BounceButton from './BounceButton.tsx';
+import DreamInterpretation from '../pages/DreamInterpretation.tsx';
+import Header from './Header.tsx';
 
 const App = () => {
+
   return (
     <BrowserRouter>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/page1" element={<Page1/>}/>
+        <Route path="/dream-interpretation" element={<DreamInterpretation/>}/>
       </Routes>
-      <Link to="/"><button>home</button></Link>
-      <Link to="/page1"><button>page1</button></Link>
-      <BounceButton name='확인'></BounceButton>
     </BrowserRouter>
   );
 }

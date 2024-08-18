@@ -6,13 +6,13 @@ type Content = {
     scale?: number;
 }
 
-const BounceButton: React.FC<Content> = ({name, scale=1.2}) => {
+const BounceButton: React.FC<Content> = ({ name, scale = 1.2 }) => {
     const currentScale = 1.2;
 
     return (
         <motion.button
-        initial={{ scale: 1 }}
-        whileTap={{ scale }}
+            initial={{ scale: 1 }}
+            whileTap={{ scale }}
         >
             {name}
         </motion.button>
