@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; // react-router-dom@^6.3.0
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // react-router-dom@^6.3.0
 import Home from '../pages/Home.tsx';
 import Interpretation from '../pages/Interpretation.tsx';
 import Header from './Header.tsx';
