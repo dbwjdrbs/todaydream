@@ -15,8 +15,12 @@ const Button: React.FC<Button> = ({ mode, name, draggable }) => {
         case 'main':
             break;
         case 'result':
-            currentClass = 'example';
+            currentClass = 'img-save-button';
             break;
+        case 'share':
+            currentClass = 'share-button';
+            break;
+        // css 만들고 조건 추가
     }
 
     return (
