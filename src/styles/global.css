@@ -13,9 +13,20 @@
   src: url("../assets/fonts/PF-StarDust-ExtraBold.ttf") format("truetype");
 }
 
+.font-normal {
+  font-family: "PF-StartDust";
+}
+
+.font-bold {
+  font-family: "PF-StartDust-Bold";
+}
+
+.font-extrabold {
+  font-family: "PF-StartDust-ExtraBold";
+}
+
 header {
-  height: 6vh;
-  position: sticky;
+  height: 60px;
   top: 0;
   left: 0;
   right: 0;
@@ -27,7 +38,8 @@ header {
   align-items: center;
   padding: 1px 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  position: sticky;
+  z-index: 10;
   /* 다른 요소 위에 나타나도록 높은 z-index 값을 설정 */
 }
 
@@ -48,11 +60,46 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  pointer-events: none; /* 포인터 이벤트 비활성화 */
+  pointer-events: none;
+  /* 포인터 이벤트 비활성화 */
 }
 
 #logo {
   margin-top: 5px;
   width: 137px;
   height: 40px;
+}
+
+@keyframes fade-in-right {
+  0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+
+.fade-in-right-obj {
+  position: relative;
+  animation: fadeInRight 1s;
+}
+
+#menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: 'rgba(0, 0, 0, 0.7)'
+}
+
+.menu-on {
+  display: flex;
+  background-color: white;
+  width: 65%;
+  height: 100%;
 }
