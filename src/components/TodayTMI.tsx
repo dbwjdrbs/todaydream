@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/todaytmi.css';
 
-type Props = {
+type TodayTMI = {
     content: string;
 }
 
-const TodayTMI: React.FC<Props> = ({ content }) => {
+const TodayTMI: React.FC<TodayTMI> = ({ content }) => {
     return (
         <section>
             <div className='content-box'>
